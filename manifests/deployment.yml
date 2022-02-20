@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: matsurigotopythonsamplevscodeflasktutorial 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: matsurigotopythonsamplevscodeflasktutorial
+  template:
+    metadata:
+      labels:
+        app: matsurigotopythonsamplevscodeflasktutorial 
+    spec:
+      containers:
+        - name: matsurigotopythonsamplevscodeflasktutorial 
+          image: durandemo.azurecr.io/matsurigotopythonsamplevscodeflasktutorial
+          ports:
+          - containerPort: 5000
